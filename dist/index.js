@@ -2580,10 +2580,12 @@ exports.getEnvs = () => new Promise((resolve, reject) => {
         return reject(new Error(`PROJECT_KEY が正しくありません。 (${PROJECT_KEY})`));
     }
     // API_HOST のチェック
+    /*
     const API_HOST = process.env.API_HOST || "";
     if (apiHostRegex.test(API_HOST) === false) {
         return reject(new Error(`API_HOST が正しくありません。 (${API_HOST})`));
     }
+    */
     // API_KEY のチェック
     const API_KEY = process.env.API_KEY || "";
     if (apiKeyRegex.test(API_KEY) === false) {
